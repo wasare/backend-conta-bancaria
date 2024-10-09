@@ -4,7 +4,7 @@ const contaRoutes = require('./routes/contaRoutes');
 
 // Middlewares
 app.use(express.json());
-//muito
+
 // Routes
 app.use('/contas', contaRoutes);
 
