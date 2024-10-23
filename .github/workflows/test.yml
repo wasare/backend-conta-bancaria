@@ -23,4 +23,4 @@ jobs:
         run: npx prisma db push
 
       - name: Run tests
-        ru
+        run: npm test
