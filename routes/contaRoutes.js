@@ -4,12 +4,13 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 router.post('/', async (req, res) => {
-    const { titular, saldo } = req.body;
+    const { titular, saldo, bolsonaro } = req.body;
     try {
       const novaConta = await prisma.conta.create({
         data: {
           titular,
           saldo,
+          bolsonaro,
         },
       });
       res.json(novaConta);
